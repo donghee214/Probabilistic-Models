@@ -433,8 +433,17 @@ class ParticleFilter(InferenceModule):
         gameState.
         """
         "*** YOUR CODE HERE ***"
-        raiseNotDefined()
+        newParticles = []
+        for particle in self.particles:
+            ret = self.getPositionDistribution(gameState, particle)
+            positions = list(ret.keys())
+            prob = list(ret.values())
 
+            randInt = numpy.random.choice(len(positions), p=prob)
+
+            newParticles.append(positions[randInt])
+
+        self.particles = newParticles
     def getBeliefDistribution(self):
         """
         Return the agent's current belief state, a distribution over ghost
