@@ -1,5 +1,5 @@
 # Probabilistic-Models
-Assignment 3 - Approximate &amp; Exact Inferencing Using Bayes Nets
+Approximate &amp; Exact Inferencing Using Bayes Nets
 
 Given an noisy input of the distance to a target(ghost) extract likely positions:
 
